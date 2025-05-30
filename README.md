@@ -3,7 +3,7 @@ Personal Portfolio Website
 Welcome to my personal portfolio website! This project highlights my skills, completed projects, and provides a way to contact me.
 
 🌐 Live Preview
-[Click here to view the website](https://yourusername.github.io/personal-portfolio/)
+[Click here to view the website](https://github.com/Prabhu200425/Personal-Portfolio)
 
 🛠️ Built With
 - HTML5  
