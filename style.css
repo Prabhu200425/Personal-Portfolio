@@ -268,34 +268,50 @@ header ul a:hover {
   margin-bottom: 30px;
 }
 
-.skills-icons {
+.skills-container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.icon-3d {
-  font-size: 60px;
-  color: #ffffff;
-  transition: transform 0.8s;
-  animation: spin360 5s linear infinite;
+.skill-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #72a1de22;
+  border-radius: 14px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  flex: 1 1 220px;
+  max-width: 260px;
 }
 
-/* Optional: On hover, pause or change speed */
-.icon-3d:hover {
-  animation-play-state: paused;
+.skill-card i {
+  font-size: 36px;
   color: #72a1de;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
-/* 360° Rotation Animation */
-@keyframes spin360 {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
+.skill-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  color: #b8c2d1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: #72a1de88;
+  box-shadow: 0 10px 25px rgba(114, 161, 222, 0.15);
 }
 
 .projects-section {
@@ -364,17 +380,123 @@ header ul a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.contact-info {
-  margin-top: 40px;
+/* ===================== CONTACT SECTION ===================== */
+
+.contact-section {
+  padding: 60px 10%;
   text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  min-width: 250px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 16px;
-  line-height: 2;
 }
 
-.contact-info a {
+.contact-item i {
   color: #72a1de;
-  text-decoration: none;
+  font-size: 20px;
+  width: 24px;
 }
 
+.contact-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
 
+.contact-social a {
+  color: white;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #72a1de;
+  border-radius: 50%;
+  transition: 0.3s;
+}
 
+.contact-social a:hover {
+  background-color: #72a1de;
+  color: black;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 280px;
+  max-width: 400px;
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #72a1de55;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #72a1de;
+  box-shadow: 0 0 8px #72a1de66;
+}
+
+.contact-form button {
+  padding: 12px 25px;
+  background-color: #72a1de;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #4d88c9;
+  box-shadow: 0 0 15px #72a1deaa;
+}
+
+@media screen and (max-width: 700px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info-box {
+    text-align: center;
+    align-items: center;
+  }
+}
