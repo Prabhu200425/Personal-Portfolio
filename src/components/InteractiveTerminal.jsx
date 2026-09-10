@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Maximize2, Minimize2, Terminal as TerminalIcon } from "lucide-react";
+import { projects } from "../data/projects";
 
 export default function InteractiveTerminal({ isOpen, onClose }) {
   const [history, setHistory] = useState([
@@ -38,7 +39,7 @@ export default function InteractiveTerminal({ isOpen, onClose }) {
   • neofetch    - Display system overview and engineer profile
   • skills      - List core IT Support & Sysadmin competencies
   • experience  - Display internship & work history
-  • projects    - List enterprise lab projects
+  • projects    - List portfolio projects
   • contact     - Print phone, email, and location
   • cat resume  - View quick resume summary
   • sudo hire   - Run expedited onboarding protocol :)
@@ -114,10 +115,9 @@ export default function InteractiveTerminal({ isOpen, onClose }) {
       case "projects":
         newHistory.push({
           type: "output",
-          text: `• password-expiry-bot   : Automated daily AD password alerts via Python & GitHub Actions
-• openvpn-server        : Enterprise VPN gateway with PKI, TLS 1.3 & AES-256-GCM
-• active-directory-lab  : Windows Server 2019 enterprise lab with GPO & DHCP
-• helpdesk-rpi4         : Bare-metal osTicket on Raspberry Pi 4 with email piping & SLAs`
+          text: projects
+            .map((project) => `• ${project.id.padEnd(25)} : ${project.name}`)
+            .join("\n")
         });
         break;
 

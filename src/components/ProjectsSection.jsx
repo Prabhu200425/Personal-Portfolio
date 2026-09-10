@@ -80,23 +80,25 @@ export default function ProjectsSection() {
 
                 <div className="p-5">
                   {/* Clone Command with Copy Action */}
-                  <div className="flex items-center justify-between gap-2 rounded-lg bg-slate-950/80 px-3 py-2 border border-slate-800/80 font-mono text-xs">
-                    <span className="truncate text-emerald-400">
-                      $ {project.command}
-                    </span>
-                    <button
-                      onClick={() => handleCopyCommand(project.id, project.command)}
-                      className="shrink-0 p-1 text-slate-400 hover:text-cyan-400 transition-colors"
-                      title="Copy clone command"
-                      aria-label="Copy clone command"
-                    >
-                      {isCopied ? (
-                        <Check size={14} className="text-emerald-400" />
-                      ) : (
-                        <Copy size={14} />
-                      )}
-                    </button>
-                  </div>
+                  {project.command && (
+                    <div className="flex items-center justify-between gap-2 rounded-lg bg-slate-950/80 px-3 py-2 border border-slate-800/80 font-mono text-xs">
+                      <span className="truncate text-emerald-400">
+                        $ {project.command}
+                      </span>
+                      <button
+                        onClick={() => handleCopyCommand(project.id, project.command)}
+                        className="shrink-0 p-1 text-slate-400 hover:text-cyan-400 transition-colors"
+                        title="Copy clone command"
+                        aria-label="Copy clone command"
+                      >
+                        {isCopied ? (
+                          <Check size={14} className="text-emerald-400" />
+                        ) : (
+                          <Copy size={14} />
+                        )}
+                      </button>
+                    </div>
+                  )}
 
                   {/* Title & Desc */}
                   <h3 className="mt-4 font-display text-lg font-bold text-slate-100 group-hover:text-cyan-300 transition-colors">

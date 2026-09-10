@@ -32,7 +32,6 @@ export const projects = [
     id: "active-directory-lab",
     category: "sysadmin",
     name: "Active Directory Enterprise Environment",
-    command: "git clone https://github.com/Prabhu200425/ad-home-lab.git",
     desc: "Complete enterprise domain topology (lab.local) on VirtualBox running Windows Server 2019, AD DS, DNS, and a DHCP server with automatic IP scope assignment. Enforced enterprise GPOs (USB blocking, Control Panel restrictions, password complexity, corporate wallpaper), OUs for IT, HR, and Finance with department NTFS permissions, and Windows Event Viewer security audit logging.",
     tags: ["Windows Server 2019", "AD DS", "Group Policy (GPO)", "DHCP Server", "DNS", "VirtualBox"],
     metrics: "Domain Controller • Multi-OU GPO • NTFS Permissions • Audit Logging",
@@ -43,11 +42,21 @@ export const projects = [
     id: "helpdesk-raspberry-pi",
     category: "sysadmin",
     name: "Helpdesk Ticketing System (osTicket on RPi 4)",
-    command: "git clone https://github.com/Prabhu200425/helpdesk-rpi4.git",
     desc: "Evaluated and deployed osTicket on Raspberry Pi 4 hardware with Apache and MariaDB under realistic IT support workloads, alongside AnyDesk and UltraViewer for remote access. Configured email piping, SLA timers, ticket routing, and auto-response templates, delivering a detailed evaluation benchmark report to management.",
     tags: ["Raspberry Pi 4", "osTicket", "Linux", "Apache", "MariaDB", "AnyDesk", "SLA Management"],
     metrics: "Bare-Metal RPi 4 • Email Piping • SLA Timers • Benchmarked",
     repoUrl: "https://github.com/Prabhu200425",
     stars: "Infrastructure R&D"
+  },
+  {
+    id: "iot-intrusion-detection",
+    category: "security",
+    name: "IoT Device Intrusion & Anomaly Detection",
+    command: "git clone https://github.com/Prabhu200425/IoT-Device-Intrusion-and-Anomaly-Detection.git",
+    desc: "Python-based IoT security project for detecting network intrusions and anomalous device activity, helping identify suspicious behavior in connected environments.",
+    tags: ["Python", "IoT Security", "Intrusion Detection", "Anomaly Detection", "Machine Learning"],
+    metrics: "IoT Monitoring • Intrusion Detection • Anomaly Analysis",
+    repoUrl: "https://github.com/Prabhu200425/IoT-Device-Intrusion-and-Anomaly-Detection",
+    stars: "Cybersecurity"
   }
 ];
